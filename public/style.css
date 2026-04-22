@@ -109,3 +109,122 @@ body {
     transform: translateY(-2px);
     box-shadow: 0 4px 15px rgba(0, 119, 182, 0.4);
 }
+
+/* ===== رسالة الخطأ ===== */
+.error-msg {
+    margin-top: 18px;
+    padding: 12px 18px;
+    background: #fff3f3;
+    border: 1px solid #ffcdd2;
+    border-radius: 8px;
+    color: #c62828;
+    font-size: 0.95rem;
+}
+
+/* ===== بطاقات النتائج ===== */
+.result-card {
+    background: white;
+    border-radius: 16px;
+    padding: 28px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.result-card h3 {
+    color: #0077b6;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #e3f2fd;
+}
+
+/* ===== شبكة المعلومات ===== */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+}
+
+.info-item {
+    background: #f8fbff;
+    border-radius: 10px;
+    padding: 16px;
+    text-align: center;
+    border: 1px solid #e3f2fd;
+}
+
+.info-item .label {
+    display: block;
+    font-size: 0.82rem;
+    color: #888;
+    margin-bottom: 8px;
+}
+
+.info-item .value {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #1a1a2e;
+}
+
+.info-item .value.highlight {
+    color: #0077b6;
+    font-size: 1.3rem;
+}
+
+/* ===== Loading Spinner ===== */
+#loadingSpinner {
+    text-align: center;
+    padding: 40px;
+    color: #0077b6;
+}
+
+.spinner {
+    width: 48px;
+    height: 48px;
+    border: 5px solid #e3f2fd;
+    border-top-color: #0077b6;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    margin: 0 auto 16px;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ===== التذييل ===== */
+.site-footer {
+    background: #0077b6;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 60px;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* ===== الجوال ===== */
+@media (max-width: 600px) {
+    .site-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .search-card {
+        padding: 24px 18px;
+    }
+
+    .search-box {
+        flex-direction: column;
+    }
+
+    .search-box button {
+        width: 100%;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
